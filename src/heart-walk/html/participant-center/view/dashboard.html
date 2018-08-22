@@ -14,10 +14,10 @@
         </div>
         <div ng-if="constituent" class="header_greetings">
           <h1 ng-if="constituent.name && constituent.name.first">
-            {{constituent.name.first}},&nbsp;<span ng-if="dashboardGreeting == 'facebookFundraiser'"><a id="facebook_fundraiser_link" ng-href="{{baseUrl}}#facebook-fundraisers" target="_self" ng-click="scrollToFacebookFundraiser()">reach your goal faster with Facebook!</a></span><span ng-if="dashboardGreeting == 'page'"><a id="get_started_link" ng-href="{{personalPageUrl}}">get started by updating your story!</a></span><span ng-if="dashboardGreeting == 'donate'"><a id="dont_forget_donation" ng-href="Donation2?df_id={{eventInfo.donationFormId}}&amp;FR_ID={{frId}}&amp;PROXY_TYPE=20&amp;PROXY_ID={{consId}}">don't forget to make a donation!</a></span><span ng-if="dashboardGreeting == 'email'"><a id="send_an_email" ng-href="{{baseUrl}}#/email/compose">send an email to get closer to your goal!</a></span><span ng-if="dashboardGreeting == 'why'"><a id="tell_us_why" ng-href="{{personalPageUrlSecure}}&amp;videoWhy=true">tell us why you walk!</a></span><span ng-if="dashboardGreeting == 'social'"><a id="go_social_with_hw" ng-href="PageServer?pagename=heartwalk_fundraising_tools&amp;fr_id={{frId}}">go social with Heart Walk!</a></span><span ng-if="dashboardGreeting == 'profile'"><a id="tell_us_about_you" href ng-click="profileChecklist()">tell us about you!</a></span><span ng-if="dashboardGreeting == 'goal1'"><a id="halfway_to_goal" ng-href="PageServer?pagename=heartwalk_fundraising_tools&amp;fr_id={{frId}}">you're halfway to your goal. Go Social</a></span><span ng-if="dashboardGreeting == 'goal2'"><a id="reached_goal" href ng-click="editGoal('Participant')">congrats! You reached your goal!</a></span><span ng-if="dashboardGreeting == 'default'"><a id="send_email_to_get_closer" ng-href="{{baseUrl}}#/email/compose">send an email to get closer to your goal!</a></span>
+            {{constituent.name.first}}, <span ng-if="dashboardGreeting == 'facebookFundraiser'"><a id="facebook_fundraiser_link" ng-href="{{baseUrl}}#facebook-fundraisers" target="_self" ng-click="scrollToFacebookFundraiser()">reach your goal faster with Facebook!</a></span><span ng-if="dashboardGreeting == 'page'"><a id="get_started_link" ng-href="{{personalPageUrl}}">get started by updating your story!</a></span><span ng-if="dashboardGreeting == 'donate'"><a id="dont_forget_donation" ng-href="Donation2?df_id={{eventInfo.donationFormId}}&amp;FR_ID={{frId}}&amp;PROXY_TYPE=20&amp;PROXY_ID={{consId}}">don't forget to make a donation!</a></span><span ng-if="dashboardGreeting == 'email'"><a id="send_an_email" ng-href="{{baseUrl}}#/email/compose">send an email to get closer to your goal!</a></span><span ng-if="dashboardGreeting == 'why'"><a id="tell_us_why" ng-href="{{personalPageUrlSecure}}&amp;videoWhy=true">tell us why you walk!</a></span><span ng-if="dashboardGreeting == 'social'"><span ng-if="device.isMobile && device.mobileType == 'ios'"><a id="go_social_with_hw" class="PCbanneriOS" ng-href="https://itunes.apple.com/us/app/heart-walk/id451276834?ls=1&mt=8" target="_blank">download the Heart Walk mobile app!</a></span><span ng-if="device.isMobile && device.mobileType == 'android'"><a id="go_social_with_hw" class="PCbannerAndroid" ng-href="https://play.google.com/store/apps/details?id=com.aha.hw.communicator" target="_blank">download the Heart Walk mobile app!</a></span><span ng-if="!device.isMobile"><a id="go_social_with_hw" class="PCbannerDesktop" ng-href="PageServer?pagename=heartwalk_fundraising_tools&amp;fr_id={{frId}}">download the Heart Walk mobile app!</a></span></span><span ng-if="dashboardGreeting == 'profile'"><a id="tell_us_about_you" href ng-click="profileChecklist()">tell us about you!</a></span><span ng-if="dashboardGreeting == 'goal1'"><a id="halfway_to_goal" ng-href="{{baseUrl}}#/social">you're halfway to your goal. Go Social</a></span><span ng-if="dashboardGreeting == 'goal2'"><a id="reached_goal" href ng-click="editGoal('Participant')">congrats! You reached your goal!</a></span><span ng-if="dashboardGreeting == 'default'"><a id="send_email_to_get_closer" ng-href="{{baseUrl}}#/email/compose">send an email to get closer to your goal!</a></span>
           </h1>
           <h1 ng-if="!constituent.name.first">
-            Participant,&nbsp;<span ng-if="dashboardGreeting == 'facebookFundraiser'"><a id="facebook_fundraiser_link_anon" ng-href="{{baseUrl}}#facebook-fundraisers" target="_self" ng-click="scrollToFacebookFundraiser()">reach your goal faster with Facebook!</a></span><span ng-if="dashboardGreeting == 'page'"><a id="get_started_link_anon" ng-href="{{personalPageUrl}}">get started by updating your story!</a></span><span ng-if="dashboardGreeting == 'donate'"><a id="dont_forget_donation_anon" ng-href="Donation2?df_id={{eventInfo.donationFormId}}&amp;FR_ID={{frId}}&amp;PROXY_TYPE=20&amp;PROXY_ID={{consId}}">don't forget to make a donation!</a></span><span ng-if="dashboardGreeting == 'email'"><a id="sent_an_email" ng-href="{{baseUrl}}#/email/compose">send an email to get closer to your goal!</a></span><span ng-if="dashboardGreeting == 'why'"><a id="tell_us_why_anon" ng-href="{{personalPageUrlSecure}}&amp;videoWhy=true">tell us why you walk!</a></span><span ng-if="dashboardGreeting == 'social'"><a id="go_social_with_hw_anon" ng-href="PageServer?pagename=heartwalk_fundraising_tools&amp;fr_id={{frId}}">go social with Heart Walk!</a></span><span ng-if="dashboardGreeting == 'profile'"><a id="tell_us_about_you_anon" href ng-click="profileChecklist()">tell us about you!</a></span><span ng-if="dashboardGreeting == 'goal1'"><a id="halfway_to_goal_anon" ng-href="PageServer?pagename=heartwalk_fundraising_tools&amp;fr_id={{frId}}">you're halfway to your goal. Go Social</a></span><span ng-if="dashboardGreeting == 'goal2'"><a id="reached_goal_anon" href ng-click="editGoal('Participant')">congrats! You reached your goal!</a></span><span ng-if="dashboardGreeting == 'default'"><a id="send_email_to_get_closer_anon" ng-href="{{baseUrl}}#/email/compose">send an email to get closer to your goal!</a></span>
+            Participant, <span ng-if="dashboardGreeting == 'facebookFundraiser'"><a id="facebook_fundraiser_link_anon" ng-href="{{baseUrl}}#facebook-fundraisers" target="_self" ng-click="scrollToFacebookFundraiser()">reach your goal faster with Facebook!</a></span><span ng-if="dashboardGreeting == 'page'"><a id="get_started_link_anon" ng-href="{{personalPageUrl}}">get started by updating your story!</a></span><span ng-if="dashboardGreeting == 'donate'"><a id="dont_forget_donation_anon" ng-href="Donation2?df_id={{eventInfo.donationFormId}}&amp;FR_ID={{frId}}&amp;PROXY_TYPE=20&amp;PROXY_ID={{consId}}">don't forget to make a donation!</a></span><span ng-if="dashboardGreeting == 'email'"><a id="sent_an_email" ng-href="{{baseUrl}}#/email/compose">send an email to get closer to your goal!</a></span><span ng-if="dashboardGreeting == 'why'"><a id="tell_us_why_anon" ng-href="{{personalPageUrlSecure}}&amp;videoWhy=true">tell us why you walk!</a></span><span ng-if="dashboardGreeting == 'social'"><span ng-if="device.isMobile && device.mobileType == 'ios'"><a id="go_social_with_hw_anon" class="PCbanneriOS" ng-href="https://itunes.apple.com/us/app/heart-walk/id451276834?ls=1&mt=8" target="_blank">download the Heart Walk mobile app!</a></span><span ng-if="device.isMobile && device.mobileType == 'android'"><a id="go_social_with_hw_anon" class="PCbannerAndroid" ng-href="https://play.google.com/store/apps/details?id=com.aha.hw.communicator" target="_blank">download the Heart Walk mobile app!</a></span><span ng-if="!device.isMobile"><a id="go_social_with_hw_anon" class="PCbannerDesktop" ng-href="PageServer?pagename=heartwalk_fundraising_tools&amp;fr_id={{frId}}" target="_blank">download the Heart Walk mobile app!</a></span></span><span ng-if="dashboardGreeting == 'profile'"><a id="tell_us_about_you_anon" href ng-click="profileChecklist()">tell us about you!</a></span><span ng-if="dashboardGreeting == 'goal1'"><a id="halfway_to_goal_anon" ng-href="{{baseUrl}}#/social">you're halfway to your goal. Go Social</a></span><span ng-if="dashboardGreeting == 'goal2'"><a id="reached_goal_anon" href ng-click="editGoal('Participant')">congrats! You reached your goal!</a></span><span ng-if="dashboardGreeting == 'default'"><a id="send_email_to_get_closer_anon" ng-href="{{baseUrl}}#/email/compose">send an email to get closer to your goal!</a></span>
           </h1>
         </div>
         <h2>
@@ -46,7 +46,7 @@
               <a id="update_page_again" class="btn btn-primary" ng-href="{{personalPageUrl}}">Update Story Again</a>
             </div>
           </div>
-          
+
           <div class="col-sm-4 profile_box" ng-if="userInteractions.donate != '1'">
             <div class="profile_box_icon pull-left">
               <i class="fa fa-dollar"></i>
@@ -70,7 +70,7 @@
               <a id="make_another_donation" class="btn btn-primary" ng-href="Donation2?df_id={{eventInfo.donationFormId}}&amp;FR_ID={{frId}}&amp;PROXY_TYPE=20&amp;PROXY_ID={{consId}}">Make Another Donation</a>
             </div>
           </div>
-          
+
           <div class="col-sm-4 profile_box" ng-if="userInteractions.email != '1'">
             <div class="profile_box_icon pull-left">
               <i class="fa fa-at"></i>
@@ -118,30 +118,34 @@
               <a id="update_your_why" class="btn btn-primary" ng-href="{{personalPageUrlSecure}}&amp;videoWhy=true">Update Your Why</a>
             </div>
           </div>
-          
-          <div class="col-sm-4 profile_box" ng-if="userInteractions.social != '1'">
+
+          <div class="col-sm-4 profile_box" ng-if="!hasBoundlessApp">
             <div class="profile_box_icon pull-left">
-              <i class="fa fa-heart"></i>
+              <img class="mobile_app_icon" src="../images/content/pagebuilder/AHA-mobile-phone-A1A2A3.svg" alt="Mobile Phone Icon">
             </div>
             <div class="profile_box_info pull-right">
               <div class="profile_box_text">
-                Deck out your social pages with these great Heart Walk images.
+                Download our mobile app to fundraise on the go! Our app makes fundraising easy.
               </div>
-              <a id="go_social" class="btn btn-primary" href ng-click="goSocial()">Go Social</a>
+              <a id="go_social" class="btn btn-primary" ng-if="device.isMobile && device.mobileType == 'android'" href="https://play.google.com/store/apps/details?id=com.aha.hw.communicator" ng-click="sendGAEvent('To do Android - mobile app download');">Get the Heart Walk App</a>
+              <a id="go_social" class="btn btn-primary" ng-if="device.isMobile && device.mobileType == 'ios'" href="https://itunes.apple.com/us/app/heart-walk/id451276834?ls=1&mt=8" ng-click="sendGAEvent('To do iOS - mobile app download');">Get the Heart Walk App</a>
+              <a id="go_social" class="btn btn-primary" ng-if="!device.isMobile" ng-href="PageServer?pagename=heartwalk_fundraising_tools&amp;fr_id={{frId}}" ng-click="sendGAEvent('To do Desktop - mobile app download');">Get the Heart Walk App</a>
             </div>
           </div>
-          <div class="col-sm-4 profile_box" ng-if="userInteractions.social == '1'">
+          <div class="col-sm-4 profile_box" ng-if="hasBoundlessApp">
             <div class="profile_box_icon pull-left">
               <i class="fa fa-check"></i>
             </div>
             <div class="profile_box_info pull-right">
               <div class="profile_box_text">
-                Revisit our Heart Walk social tools to rev up your social pages!
+                You&rsquo;ve downloaded the app, so now use it! It&rsquo;ll make fundraising easy peasy!
               </div>
-              <a id="go_social_again" class="btn btn-primary" ng-href="PageServer?pagename=heartwalk_fundraising_tools&amp;fr_id={{frId}}">Go Social</a>
+              <a id="go_social_again" class="btn btn-primary" ng-if="device.isMobile && device.mobileType == 'android'" href="https://play.google.com/store/apps/details?id=com.aha.hw.communicator" ng-click="sendGAEvent('To do Android - mobile app downloaded');">Use the Heart Walk App</a>
+              <a id="go_social_again" class="btn btn-primary" ng-if="device.isMobile && device.mobileType == 'ios'" href="https://itunes.apple.com/us/app/heart-walk/id451276834?ls=1&mt=8" ng-click="sendGAEvent('To do iOS - mobile app downloaded');">Use the Heart Walk App</a>
+              <a id="go_social_again" class="btn btn-primary" ng-if="!device.isMobile" ng-href="PageServer?pagename=heartwalk_fundraising_tools&amp;fr_id={{frId}}" ng-click="sendGAEvent('To do Desktop - mobile app downloaded');">Use the Heart Walk App</a>
             </div>
           </div>
-          
+
           <div class="col-sm-4 profile_box" ng-if="userInteractions.profile != '1'">
             <div class="profile_box_icon pull-left profile_progress">
               <div class="progress red ratio{{profileProgress}}">
@@ -226,7 +230,57 @@
           </p>
         </div>
       </div>
-      <div class="clearfix">
+      <div class="clearfix heart_pc_achievements_container">
+        <h2>My Achievements</h2>
+        <p>Earn as you reach for your goal. Curious what badges you get? <a href="PageServer?pagename=heartwalk_fundraising_tools&amp;fr_id={{frId}}" ng-click="sendGAEvent('Badges - learn more');">Read more to learn all about achievement badges.</a></p>
+        <ul class="heart_pc_achievements_badge_list">
+          <li class="heart_pc_achievements_badge_item" ng-if="userInteractions.donate == '1'">
+            <img src="../images/content/pagebuilder/heart-walk-personal-donation-no-text.svg" alt="You Made a Personal Donation badge">
+            <span>I donated<br>towards my goal</span>
+          </li>
+          <li class="heart_pc_achievements_badge_item" ng-if="overFiveDonations">
+            <img src="../images/content/pagebuilder/heart-walk-5-donations-no-text.svg" alt="You've Collected Over 5+ Donations badge">
+            <span>I've received<br>5+ donations</span>
+          </li>
+          <li class="heart_pc_achievements_badge_item" ng-if="participantProgress.percent > 99">
+            <img src="../images/content/pagebuilder/heart-walk-hit-goal-no-text.svg" alt="You've Reached Your Fundraising Goal badge">
+            <span>I hit my<br>fundraising goal</span>
+          </li>
+          <li class="heart_pc_achievements_badge_item" ng-if="participantProgress.raised / 100 > 99 && participantProgress.raised  / 100 < 249" >
+            <img src="../images/content/pagebuilder/heart-walk-$100-milestone-no-text.svg" alt="You've Raised Over $100 Milestone badge">
+            <span>$100<br>milestone</span>
+          </li>
+          <li class="heart_pc_achievements_badge_item" ng-if="participantProgress.raised / 100 > 249 && participantProgress.raised / 100 < 499">
+            <img src="../images/content/pagebuilder/heart-walk-$250-milestone-no-text.svg" alt="You've Raised Over $250  Milestone badge">
+            <span>$250<br>milestone</span>
+          </li>
+          <li class="heart_pc_achievements_badge_item" ng-if="participantProgress.raised / 100 > 499 && participantProgress.raised / 100 < 999">
+            <img src="../images/content/pagebuilder/heart-walk-$500-milestone-no-text.svg" alt="You've Raised Over $500 Milestone badge">
+            <span>$500<br>milestone</span>
+          </li>
+          <li class="heart_pc_achievements_badge_item" ng-if="participantProgress.raised / 100 > 999 && participantProgress.raised / 100 < 4999">
+            <img src="../images/content/pagebuilder/heart-walk-$1K-milestone-no-text.svg" alt="You've Raised Over $1000 Milestone badge">
+            <span>$1000<br>milestone</span>
+          </li>
+          <li class="heart_pc_achievements_badge_item" ng-if="participantProgress.raised / 100 > 4999">
+            <img src="../images/content/pagebuilder/heart-walk-$5K-milestone-no-text.svg" alt="You've Raised Over $5000 Milestone badge">
+            <span>$5000<br>milestone</span>
+          </li>
+          <li class="heart_pc_achievements_badge_item" ng-if="participantRegistration.aTeamCaptain == 'true'">
+            <img src="../images/content/pagebuilder/heart-walk-coach-no-text.svg" alt="You Are a Coach badge">
+            <span>I'm a<br>coach</span>
+          </li>
+          <li class="heart_pc_achievements_badge_item" ng-if="hasBoundlessApp">
+            <img src="../images/content/pagebuilder/heart-walk-mobile-app-no-text.svg" alt="You've Downloaded the Mobile App badge">
+            <span>I downloaded the<br>Heart Walk app</span>
+          </li>
+          <li class="heart_pc_achievements_badge_item" ng-if="isOnSocial">
+            <img src="../images/content/pagebuilder/heart-walk-bf-social-no-text.svg" alt="You're fundraising on Social badge">
+            <span>I'm fundraising<br>on social</span>
+          </li>
+        </ul>
+      </div>
+      <div class="clearfix xyz123">
         <div class="heart-page-rail heart-page-rail--participant-center">
           <h2>
             My Progress:

@@ -2,22 +2,22 @@
   .modal-body {
     font-size: 15px;
   }
-  
+
   .modal-header__btns {
     float: right;
-    
+
     .btn {
       margin: 0 0 0 6px;
     }
   }
-  
+
   .modal-header__btns--block-xxs {
     @media (max-width: 359px) {
       float: none;
       display: block;
       text-align: center;
       margin: 0 0 18px 0;
-      
+
       .btn {
         margin: 0 3px;
       }
@@ -53,45 +53,47 @@
       color: $brand-white;
     }
   }
-  
+
   .modal-footer-red {
     background: $brand-primary;
     border-top: none;
-    
+
     .lb_skip_link {
       color: $brand-white;
-      
+
       a {
         color: inherit;
       }
     }
   }
-  
+
   .modal-text-center {
     text-align: center;
   }
-  
-  .btn.pc-facebook-fundraiser-btn, 
-  a.btn.pc-facebook-fundraiser-btn {
-    &, 
-    &:link, 
-    &:visited, 
-    &:hover, 
-    &:focus, 
+
+  .btn.pc-facebook-fundraiser-btn,
+  a.btn.pc-facebook-fundraiser-btn,
+  .btn.pc-white-btn,
+  a.btn.pc-white-btn {
+    &,
+    &:link,
+    &:visited,
+    &:hover,
+    &:focus,
     &:active {
       background: $brand-white;
       border-color: $brand-white;
       color: $brand-primary;
     }
-    
+
     .hidden-text-xxs {
       display: none;
-      
+
       @media (min-width: 414px) {
         display: inline;
       }
     }
-    
+
     .fa {
       margin: 0 4px 0 0;
     }

@@ -185,6 +185,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   }
   .profile_box_icon {
     font-size: 48px;
+
+    .mobile_app_icon {
+      max-width: 84px;
+    }
   }
   .row.profile_box_row {
     border: 0;
@@ -564,6 +568,13 @@ div#send_via_FC {
   }
 }
 
+.ng-pc-container #social-frame iframe {
+    min-height: 1000px;
+    width:100%;
+    height:100%;
+    border:1px solid #cccccc;
+}
+
 .ng-pc-container .pc-facebook-fundraiser-connected {
   background: #4260b4;
   color: #ffffff;
@@ -611,5 +622,34 @@ div#send_via_FC {
   p.small {
     font-size: 12px;
     margin: 0;
+  }
+}
+
+.heart_pc_achievements {
+  &_container {
+    border-bottom: 1px solid #dfe0e0;
+  }
+
+  &_badge_list {
+    list-style: none;
+    padding-left: 0;
+    padding: 2em 0;
+    text-align: center;
+  }
+  
+  &_badge_item {
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 1em;
+  }
+
+  &_badge_item img{
+    width: 100px;
+  }
+
+  &_badge_item span{
+    display: block;
+    font-size: 16px;
   }
 }

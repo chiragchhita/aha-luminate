@@ -1,25 +1,25 @@
 <div class="modal-header modal-header-red modal-text-center">
   <h2 class="modal-title">
-    Time to Go Social!
+    Time to Go Mobile, <span ng-if="constituent.name && constituent.name.first">{{constituent.name.first}}</span><span ng-if="!constituent.name.first">Participant</span>!
   </h2>
 </div>
 <div class="modal-body modal-body-red modal-text-center">
   <div>
-    <p>
-      We've got some great social media tools you can use to chat up Heart Walk on Facebook, Twitter, or Instagram... or all three! Use them to share why you walk!
-    </p>
+    <p>Awesome tip of the day: download the Heart Walk fundraising mobile app! It&rsquo;ll make sharing your story and fundraising oh so easy.</p>
   </div>
 </div>
 <div class="modal-footer modal-footer-red">
   <div class="clearfix">
     <div class="pull-left">
-      <a class="btn btn-outline-white text-uppercase" href ng-click="sendGAEvent('Not Right Now - social lightbox'); notRightNow();">Not Right Now</a>
+      <a class="btn pc-white-btn text-uppercase" href ng-click="sendGAEvent('Not right now – mobile app lightbox'); notRightNow();">Not Right Now</a>
     </div>
     <div class="pull-right">
-      <a class="btn btn-outline-white text-uppercase" href ng-click="sendGAEvent('Go Social - social lightbox'); goSocial();">Go Social</a>
+      <a class="btn pc-white-btn text-uppercase" ng-if="device.isMobile && device.mobileType == 'android'" ng-href="https://play.google.com/store/apps/details?id=com.aha.hw.communicator" ng-click="sendGAEvent('Android store - mobile app lightbox');">Get the App</a>
+      <a class="btn pc-white-btn text-uppercase" ng-if="device.isMobile && device.mobileType == 'ios'" ng-href="https://itunes.apple.com/us/app/heart-walk/id451276834?ls=1&mt=8" ng-click="sendGAEvent('Apple store - mobile app lightbox');">Get the App</a>
+      <a class="btn pc-white-btn text-uppercase" ng-if="!device.isMobile" ng-href="PageServer?pagename=heartwalk_fundraising_tools&amp;fr_id={{frId}}"  ng-click="sendGAEvent('Resources page link - mobile app lightbox');">Get the App</a>
     </div>
   </div>
   <div class="lb_skip_link">
-    <a href ng-click="sendGAEvent('Mark Going Social as Complete - social lightbox'); LBskip('social');">Mark as Complete</a>
+    <a href ng-click="sendGAEvent('Mark as complete - mobile app lightbox'); LBskip('social');">Mark as Complete</a>
   </div>
 </div>

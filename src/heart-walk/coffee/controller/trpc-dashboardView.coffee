@@ -401,6 +401,9 @@ angular.module 'trPcControllers'
               if $rootScope.isSelfDonor is 'TRUE' and $scope.userInteractions.donate is 0
                 $scope.userInteractions.donate = 1
                 logUserInt 'donate', $scope.frId
+              if $rootScope.hasBoundlessApp is 'true' and $scope.userInteractions.social is 0
+                $scope.userInteractions.social = 1
+                logUserInt 'social', $scope.frId
               if $scope.messageCounts.sentMessages > 0 and $scope.userInteractions.email is 0
                 $scope.userInteractions.email = 1
                 logUserInt 'email', $scope.frId
@@ -567,8 +570,12 @@ angular.module 'trPcControllers'
             , 250
 
       $scope.goSocial = ->
-        logUserInt 'social', $scope.frId
-        window.location.href = 'PageServer?pagename=heartwalk_fundraising_tools&amp;fr_id=' + $scope.frId
+        if $rootScope.device.mobileType == 'android'
+          window.location = 'https://play.google.com/store/apps/details?id=com.aha.hw.communicator'
+        else if $rootScope.device.mobileType == 'ios'
+          window.location = 'https://itunes.apple.com/us/app/heart-walk/id451276834?ls=1&mt=8'
+        else
+          window.location = 'PageServer?pagename=heartwalk_fundraising_tools&amp;pc2_page=center&amp;fr_id=' + $scope.frId + '#/social'
 
       $scope.profileProgress = 0
       $scope.profileChecklist = ->

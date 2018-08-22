@@ -24,6 +24,9 @@ angular.module 'trPcApp'
         .when '/email/contacts/:filter/list',
           templateUrl: APP_INFO.rootPath + 'dist/heart-walk/html/participant-center/view/emailContactsList.html'
           controller: 'EmailContactsListViewCtrl'
+        .when '/social',
+          templateUrl: APP_INFO.rootPath + 'dist/heart-walk/html/participant-center/view/social.html'
+          controller: 'socialViewCtrl'
         .when '/profile',
           templateUrl: APP_INFO.rootPath + 'dist/heart-walk/html/participant-center/view/consProfile.html'
           controller: 'ConsProfileViewCtrl'
