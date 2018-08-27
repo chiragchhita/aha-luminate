@@ -105,7 +105,7 @@
                 <div class="col-md-6">
 		    <h4>Top class for dollars raised</h4>
                     <div class="ym-tl-dollars-raised">
-                        <div class="row" ng-repeat="topRaised in topClassRaised.teachers" role="listitem" ng-if="topClassRaised.teachers.length > 0" ng-cloak>
+                        <div class="row" ng-repeat="topRaised in topClassRaised" role="listitem" ng-if="topClassRaised.length > 0" ng-cloak>
                             <div class="span2">#{{$index +1}}1</div>
                             <div class="span2">
                                 <div class="row-fluid">
@@ -121,7 +121,7 @@
                 <div class="col-md-6">
 		    <h4>Top class for registered students</h4>
   		    <div class="ym-tl-registered-students">
-                        <div class="row" ng-repeat="topStudent in topClassStudents.teachers" role="listitem" ng-if="topClassStudents.teachers.length > 0" ng-cloak>
+                        <div class="row" ng-repeat="topStudent in topClassStudents" role="listitem" ng-if="topClassStudents.length > 0" ng-cloak>
                             <div class="span2">#{{$index +1}}1</div>
                             <div class="span2">
                                 <div class="row-fluid">
