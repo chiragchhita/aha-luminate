@@ -27,8 +27,8 @@ angular.module 'ahaLuminateControllers'
       $scope.activity1amt = ''
       $scope.activity2amt = ''
       $scope.activity3amt = ''
-      $scope.tlDollarsRaised = ''
-      $scope.tlRegisteredStudents = ''
+      $scope.topClassRaised = []
+      $scope.topClassStudents = []
       
       $scope.trustHtml = (html) ->
         return $sce.trustAsHtml(html)
@@ -334,11 +334,28 @@ angular.module 'ahaLuminateControllers'
                 $scope.companyPageContent.mode = 'view'
                 if not $scope.$$phase
                   $scope.$apply()  
-      ###
-      BoundlessService.getLeaderboards $scope.companyId,
-        error: (response) ->
-        success: (response) ->
-          $scope.tlDollarsRaised = ''
-          $scope.tlRegisteredStudents = ''
-      ###
-  ]
+     
+      getLeaderboards: ->
+        BoundlessService.getLeaderboardRaised $scope.companyId,
+          error: (response) ->
+          success: (response) ->
+            teachers = response.data.teachers
+            angular.forEach teachers, (teacher) ->
+              $scope.topClassRaised.push
+                name: teacher.name
+                grade: teacher.grade
+                raised: teacher.raised
+
+        BoundlessService.getLeaderboardStudents $scope.companyId,
+          error: (response) ->
+          success: (response) ->
+            teachers = response.data.teachers
+            angular.forEach teachers, (teacher) ->
+              $scope.topClassStudents.push
+                name: teacher.name
+                grade: teacher.grade
+                students: teacher.students
+      
+      getLeaderboards()
+      
+]
