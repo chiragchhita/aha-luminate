@@ -345,7 +345,17 @@ angular.module 'ahaLuminateControllers'
                 name: teacher.name
                 grade: teacher.grade
                 raised: teacher.raised
+                msg: 'Amount Raised'
 
+            i = $scope.topClassRaised.length
+            while i < 5
+              $scope.topClassRaised.push
+                name: ''
+                grade: ''
+                raised: ''
+                msg: ''
+              i++ 
+              
         BoundlessService.getLeaderboardStudents $scope.companyId,
           error: (response) ->
           success: (response) ->
@@ -355,6 +365,17 @@ angular.module 'ahaLuminateControllers'
                 name: teacher.name
                 grade: teacher.grade
                 students: teacher.students
+                msg: '# Online Students'
+
+            i = $scope.topClassStudents.length
+            while i < 5
+              $scope.topClassStudents.push
+                name: ''
+                grade: ''
+                raised: ''
+                msg: ''
+              i++ 
+              
       
       getLeaderboards()
       
