@@ -335,7 +335,7 @@ angular.module 'ahaLuminateControllers'
                 if not $scope.$$phase
                   $scope.$apply()  
      
-      getLeaderboards: ->
+      $scope.getLeaderboards: ->
         BoundlessService.getLeaderboardRaised $scope.companyId,
           error: (response) ->
           success: (response) ->
@@ -377,6 +377,6 @@ angular.module 'ahaLuminateControllers'
               i++ 
               
       
-      getLeaderboards()
+      $scope.getLeaderboards()
       
 ]
