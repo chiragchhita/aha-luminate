@@ -4,6 +4,19 @@ header {
     line-height: 70px;
     padding-left: 10px;
   }
+  .ym-header-logo--middle-school {
+    float:right;
+    border-left:none;
+    
+    > a, 
+    > span {
+      margin: -2px 12px 0;
+    }
+    
+    > a img {
+      max-height: 80px;
+    }
+  }
 
   @media (max-width: $screen-xs-max) {
     .ym-header-logo--aha > a img {

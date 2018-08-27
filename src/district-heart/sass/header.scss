@@ -5,6 +5,20 @@ header {
     padding-left: 10px;
   }
 
+  .ym-header-logo--district-heart {
+    float:right;
+    border-left:none;
+
+    > a, 
+    > span {
+      margin: -2px 12px 0;
+    }
+    
+    > a img {
+      max-height: 80px;
+    }
+  }
+
   @media(max-width: 370px) {
     .ym-header-logo--district-heart {
       width: 45%;
