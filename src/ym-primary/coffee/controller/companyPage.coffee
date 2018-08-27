@@ -375,8 +375,6 @@ angular.module 'ahaLuminateControllers'
                 raised: ''
                 msg: ''
               i++ 
-              
-      
-     getLeaderboards()
+      getLeaderboards()
       
 ]
