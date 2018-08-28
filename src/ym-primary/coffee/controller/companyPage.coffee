@@ -336,45 +336,43 @@ angular.module 'ahaLuminateControllers'
                   $scope.$apply()  
      
       getLeaderboards = ->
-        BoundlessService.getLeaderboardRaised $scope.companyId,
-          error: (response) ->
-          success: (response) ->
-            teachers = response.data.teachers
-            angular.forEach teachers, (teacher) ->
-              $scope.topClassRaised.push
-                name: teacher.name
-                grade: teacher.grade
-                raised: teacher.raised
-                msg: 'Amount Raised'
+        BoundlessService.getLeaderboardRaised $scope.companyId
+        .then (response) ->
+          teachers = response.data.teachers
+          angular.forEach teachers, (teacher) ->
+            $scope.topClassRaised.push
+              name: teacher.name
+              grade: teacher.grade
+              raised: teacher.raised
+              msg: 'Amount Raised'
 
-            i = $scope.topClassRaised.length
-            while i < 5
-              $scope.topClassRaised.push
-                name: ''
-                grade: ''
-                raised: ''
-                msg: ''
-              i++ 
+          i = $scope.topClassRaised.length
+          while i < 5
+            $scope.topClassRaised.push
+              name: ''
+              grade: ''
+              raised: ''
+              msg: ''
+            i++ 
               
-        BoundlessService.getLeaderboardStudents $scope.companyId,
-          error: (response) ->
-          success: (response) ->
-            teachers = response.data.teachers
-            angular.forEach teachers, (teacher) ->
-              $scope.topClassStudents.push
-                name: teacher.name
-                grade: teacher.grade
-                students: teacher.students
-                msg: '# Online Students'
+        BoundlessService.getLeaderboardStudents $scope.companyId
+        .then (response) ->
+          teachers = response.data.teachers
+          angular.forEach teachers, (teacher) ->
+            $scope.topClassStudents.push
+              name: teacher.name
+              grade: teacher.grade
+              students: teacher.students
+              msg: '# Online Students'
 
-            i = $scope.topClassStudents.length
-            while i < 5
-              $scope.topClassStudents.push
-                name: ''
-                grade: ''
-                raised: ''
-                msg: ''
-              i++ 
+          i = $scope.topClassStudents.length
+          while i < 5
+            $scope.topClassStudents.push
+              name: ''
+              grade: ''
+              raised: ''
+              msg: ''
+            i++ 
       getLeaderboards()
       
 ]
