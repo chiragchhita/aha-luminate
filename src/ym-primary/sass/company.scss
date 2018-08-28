@@ -9,11 +9,19 @@
     color: #a41752;
   }
 }
+.ym-tl-dollars-raised {
+  .row {
+	  margin-right: 2px;
+}
+.ym-tl-registered-students {
+  .row {
+	  margin-left:2px;
+}
 .ym-tl-dollars-raised, 
 .ym-tl-registered-students {
   .row {
 	  padding: 10px;
-	  color: #fff;
+	  color: #000;
 	  margin-bottom: 5px;
     &:nth-child(1) {
     	background: #94C960;
