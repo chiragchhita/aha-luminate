@@ -1,46 +1,65 @@
 body.pg-company .ym-promo-block__item {
-	margin: 10px;
-	width: 200px;
-	height: 200px;
+     margin: 10px;
+     width: 200px;
+     height: 200px;
 }
-
 .ym-teachers-leaderboard-block {
-  h2 {
-    font-size:42px;
-    color:#a41752;
-  }
-  h3 {
-    font-size: 20px;
-    text-align: center;
-    color: #a41752;
-  }
+     h2 {
+         font-size:42px;
+         color:#a41752;
+    }
+     h3 {
+         font-size: 20px;
+         text-align: center;
+         color: #a41752;
+    }
+     .ym-tl-dollars-raised .row {
+         margin-right: 2px;
+    }
+     .ym-tl-registered-students .row {
+         margin-left:2px;
+    }
+     .ym-tl-dollars-raised, .ym-tl-registered-students {
+         .row {
+             padding: 10px;
+             color: #000;
+             margin-bottom: 5px;
+             &:nth-child(1) {
+                 background: #94C960;
+            }
+             &:nth-child(2) {
+                 background: #A8D180;
+            }
+             &:nth-child(3) {
+                 background: #BDDC9D;
+            }
+             &:nth-child(4) {
+                 background: #D2E6BB;
+            }
+             &:nth-child(5) {
+                 background: #E7F1DB;
+            }
+        }
+    }
+     .top-index {
+         text-align:left;
+    }
+     .top-detail {
+         text-align:center;
+    }
+     .top-index, .top-detail {
+         padding-left:0px;
+    }
+     .top-name {
+    }
+     .top-grade {
+        font-size:10px;
+    }
+     .top-raised, .top-students {
+        margin-top:10px;
+    }
+     .top-msg {
+        font-size:10px;
+    }
 }
-.ym-tl-dollars-raised .row {
-	margin-right: 2px;
-}
-.ym-tl-registered-students .row {
-	margin-left:2px;
-}
-.ym-tl-dollars-raised, 
-.ym-tl-registered-students {
-  .row {
-	  padding: 10px;
-	  color: #000;
-	  margin-bottom: 5px;
-    &:nth-child(1) {
-    	background: #94C960;
-    }
-    &:nth-child(2) {
-    	background: #A8D180;
-    }
-    &:nth-child(3) {
-    	background: #BDDC9D;
-    }
-    &:nth-child(4) {
-    	background: #D2E6BB;
-    }
-    &:nth-child(5) {
-    	background: #E7F1DB;
-    }
-  }
-}
+ 
