@@ -1,4 +1,34 @@
-.ym-teachers-leaderboard h2 {
-  font-size:42px;
-  color:#a41752;
+.ym-teachers-leaderboard {
+  h2 {
+    font-size:42px;
+    color:#a41752;
+  }
+  h3 {
+    font-size: 20px;
+    text-align: center;
+    color: #a41752;
+  }
+}
+.ym-tl-dollars-raised, 
+.ym-tl-registered-students {
+  .row {
+	  padding: 10px;
+	  margin-right: 10px;
+	  color: #fff;
+    :nth-child(1) {
+    	background: #94C960;
+    }
+    :nth-child(2) {
+    	background: #A8D180;
+    }
+    :nth-child(3) {
+    	background: #BDDC9D;
+    }
+    :nth-child(4) {
+    	background: #D2E6BB;
+    }
+    :nth-child(5) {
+    	background: #E7F1DB;
+    }
+  }
 }
