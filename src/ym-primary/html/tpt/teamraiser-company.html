@@ -50,52 +50,48 @@
     </div>
     <div class="ym-page-section ym-page-section__main">
         <div class="col-md-6" ng-show="participantCount &gt; 0 &amp;&amp; (activity1amt != 0 || activity2amt != 0 || activity3amt != 0)" ng-cloak>
-            <div class="container">
-                <div class="ym-our-stats ym-promo-block">
-                    <h2 class="ym-headline">
-						Our Stats 
-					</h2>
-                    <div class="ym-promo-block__item ym-promo-block__item--members ym-promo-block--circle">
-                        <div class="h2 ym-headline">
-                            {{participantCount}}
-                        </div>
-                        <div ng-if="participantCount == 1" ng-cloak>
-                            <p>
-                                team member registered.
-                            </p>
-                        </div>
-                        <div ng-if="participantCount > 1" ng-cloak>
-                            <p>
-                                team members registered.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="ym-promo-block__item ym-promo-block--circle" ng-if="activity1amt != 0" ng-cloak>
-                        <div class="h2 ym-headline">
-                            {{activity1amt}}
-                        </div>
-                        <p>
-                            daily challenges of exercising 60 minutes a day!
-                        </p>
-                    </div>
-                    <div class="ym-promo-block__item ym-promo-block--circle" ng-if="activity2amt != 0" ng-cloak>
-                        <div class="h2 ym-headline">
-                            {{activity2amt}}
-                        </div>
-                        <p>
-                            daily challenges of choosing water over sugar drinks.
-                        </p>
-                    </div>
-                    <div class="ym-promo-block__item ym-promo-block__item--food ym-promo-block--circle" ng-if="activity3amt != 0" ng-cloak>
-                        <div class="h2 ym-headline">
-                            {{activity3amt}}
-                        </div>
-                        <p>
-                            daily challenges of doing a good deed.
-                        </p>
-                    </div>
-                </div>
-            </div>
+		<div class="ym-our-stats ym-promo-block">
+		    <h2 class="ym-headline">Our Stats</h2>
+		    <div class="ym-promo-block__item ym-promo-block__item--members ym-promo-block--circle">
+			<div class="h2 ym-headline">
+			    {{participantCount}}
+			</div>
+			<div ng-if="participantCount == 1" ng-cloak>
+			    <p>
+				team member registered.
+			    </p>
+			</div>
+			<div ng-if="participantCount > 1" ng-cloak>
+			    <p>
+				team members registered.
+			    </p>
+			</div>
+		    </div>
+		    <div class="ym-promo-block__item ym-promo-block--circle" ng-if="activity1amt != 0" ng-cloak>
+			<div class="h2 ym-headline">
+			    {{activity1amt}}
+			</div>
+			<p>
+			    daily challenges of exercising 60 minutes a day!
+			</p>
+		    </div>
+		    <div class="ym-promo-block__item ym-promo-block--circle" ng-if="activity2amt != 0" ng-cloak>
+			<div class="h2 ym-headline">
+			    {{activity2amt}}
+			</div>
+			<p>
+			    daily challenges of choosing water over sugar drinks.
+			</p>
+		    </div>
+		    <div class="ym-promo-block__item ym-promo-block__item--food ym-promo-block--circle" ng-if="activity3amt != 0" ng-cloak>
+			<div class="h2 ym-headline">
+			    {{activity3amt}}
+			</div>
+			<p>
+			    daily challenges of doing a good deed.
+			</p>
+		    </div>
+		</div>
         </div>
         <div class="col-md-6">
             <div class="container ym-teachers-leaderboard-block">
