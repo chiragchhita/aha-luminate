@@ -106,14 +106,12 @@
 		    <h3>Top class for dollars raised</h3>
                     <div class="ym-tl-dollars-raised">
                         <div class="row" ng-repeat="topRaised in topClassRaised" role="listitem" ng-if="topClassRaised.length > 0" ng-cloak>
-                            <div class="span2">#{{$index+1}}</div>
-                            <div class="span2">
-                                <div class="row-fluid">
-                                    <div class="span12">{{topRaised.name}}</div>
-                                    <div class="span12">{{topRaised.grade}}</div>
-                                    <div class="span12">{{topRaised.raised}}</div>
-				    <div class="span12">{{topRaised.msg}}</div>
-                                </div>
+                            <div class="col-md-2">#{{$index+1}}</div>
+                            <div class="col-md-10 top-detail">
+                                <div class="top-name">{{topRaised.name}}</div>
+                                <div class="top-grade">{{topRaised.grade}}</div>
+                                <div class="top-raised">{{topRaised.raised}}</div>
+				<div class="top-msg">{{topRaised.msg}}</div>
                             </div>
                         </div>
                     </div>
@@ -122,14 +120,12 @@
 		    <h3>Top class for registered students</h3>
   		    <div class="ym-tl-registered-students">
                         <div class="row" ng-repeat="topStudent in topClassStudents" role="listitem" ng-if="topClassStudents.length > 0" ng-cloak>
-                            <div class="span2">#{{$index+1}}</div>
-                            <div class="span2">
-                                <div class="row-fluid">
-                                    <div class="span12">{{topStudent.name}}</div>
-                                    <div class="span12">{{topStudent.grade}}</div>
-                                    <div class="span12">{{topStudent.students}}</div>
-				    <div class="span12">{{topStudent.msg}}</div>
-                                </div>
+                            <div class="col-md-2 top-index">#{{$index+1}}</div>
+                            <div class="col-md-10 top-detail">
+                                <div class="top-name">{{topStudent.name}}</div>
+                                <div class="top-grade">{{topStudent.grade}}</div>
+                                <div class="top-students">{{topStudent.students}}</div>
+				<div class="top-msg">{{topStudent.msg}}</div>
                             </div>
                         </div>
                     </div>
