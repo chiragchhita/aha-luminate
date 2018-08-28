@@ -2,7 +2,12 @@ body.pg-company .ym-promo-block__item {
      margin: 10px;
      width: 200px;
      height: 200px;
+
+     .ym-page-section__main > .col-md-6 {
+          padding: 0 20px;
+     }
 }
+
 .ym-teachers-leaderboard-block {
      h2 {
          font-size:42px;
