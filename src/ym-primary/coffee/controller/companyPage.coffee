@@ -349,10 +349,10 @@ angular.module 'ahaLuminateControllers'
           i = $scope.topClassRaised.length
           while i < 5
             $scope.topClassRaised.push
-              name: ''
-              grade: ''
-              raised: ''
-              msg: ''
+              name: 'Johnson'
+              grade: '5th Grade'
+              raised: '$5,000'
+              msg: 'Amount Raised'
             i++ 
               
         BoundlessService.getLeaderboardStudents $scope.companyId
@@ -368,10 +368,10 @@ angular.module 'ahaLuminateControllers'
           i = $scope.topClassStudents.length
           while i < 5
             $scope.topClassStudents.push
-              name: ''
-              grade: ''
-              raised: ''
-              msg: ''
+              name: 'Johnson'
+              grade: '5th Grade'
+              students: '10'
+              msg: '# Online Students'
             i++ 
       getLeaderboards()
       
