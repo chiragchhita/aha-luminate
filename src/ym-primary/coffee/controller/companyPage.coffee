@@ -340,9 +340,12 @@ angular.module 'ahaLuminateControllers'
         .then (response) ->
           teachers = response.data.teachers
           angular.forEach teachers, (teacher) ->
+            grade = teacher.grade_name
+            if teacher.grade_name != null
+              grade = "N/A"
             $scope.topClassRaised.push
               name: teacher.teacher_name
-              grade: (teacher.grade_name != null) ? teacher.grade_name : "N/A"
+              grade: grade
               raised: teacher.total | 0
               msg: 'Amount Raised'
           ###
@@ -359,9 +362,12 @@ angular.module 'ahaLuminateControllers'
         .then (response) ->
           teachers = response.data.teachers
           angular.forEach teachers, (teacher) ->
+            grade = teacher.grade_name
+            if teacher.grade_name != null
+              grade = "N/A"
             $scope.topClassStudents.push
               name: teacher.teacher_name
-              grade: (teacher.grade_name != null) ? teacher.grade_name : "N/A"
+              grade: grade
               students: teacher.students | 0
               msg: '# Online Students'
           ###
