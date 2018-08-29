@@ -343,7 +343,7 @@ angular.module 'ahaLuminateControllers'
             $scope.topClassRaised.push
               name: teacher.teacher_name
               grade: teacher.grade_name
-              raised: teacher.total | "$0"
+              raised: teacher.total | 0
               msg: 'Amount Raised'
 
           i = $scope.topClassRaised.length
@@ -362,7 +362,7 @@ angular.module 'ahaLuminateControllers'
             $scope.topClassStudents.push
               name: teacher.teacher_name
               grade: teacher.grade_name
-              students: teacher.students | "0"
+              students: teacher.students | 0
               msg: '# Online Students'
 
           i = $scope.topClassStudents.length
