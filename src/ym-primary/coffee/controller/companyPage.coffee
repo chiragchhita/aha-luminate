@@ -342,7 +342,7 @@ angular.module 'ahaLuminateControllers'
           angular.forEach teachers, (teacher) ->
             $scope.topClassRaised.push
               name: teacher.teacher_name
-              grade: teacher.grade_name
+              grade: teacher.grade_name | "N/A"
               raised: teacher.total | 0
               msg: 'Amount Raised'
 
@@ -361,7 +361,7 @@ angular.module 'ahaLuminateControllers'
           angular.forEach teachers, (teacher) ->
             $scope.topClassStudents.push
               name: teacher.teacher_name
-              grade: teacher.grade_name
+              grade: teacher.grade_name | "N/A"
               students: teacher.students | 0
               msg: '# Online Students'
 
