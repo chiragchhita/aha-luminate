@@ -341,9 +341,9 @@ angular.module 'ahaLuminateControllers'
           teachers = response.data.teachers
           angular.forEach teachers, (teacher) ->
             $scope.topClassRaised.push
-              name: teacher.name
-              grade: teacher.grade
-              raised: teacher.raised
+              name: teacher.teacher_name
+              grade: teacher.grade_name
+              raised: teacher.total
               msg: 'Amount Raised'
 
           i = $scope.topClassRaised.length
@@ -360,8 +360,8 @@ angular.module 'ahaLuminateControllers'
           teachers = response.data.teachers
           angular.forEach teachers, (teacher) ->
             $scope.topClassStudents.push
-              name: teacher.name
-              grade: teacher.grade
+              name: teacher.teacher_name
+              grade: teacher.grade_name
               students: teacher.students
               msg: '# Online Students'
 
