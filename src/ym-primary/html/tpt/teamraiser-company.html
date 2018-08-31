@@ -102,8 +102,8 @@
 		    <h3>Top class for<br/>dollars raised</h3>
                     <div class="ym-tl-dollars-raised col-md-12">
                         <div class="row" ng-repeat="topRaised in topClassRaised" role="listitem" ng-if="topClassRaised.length > 0" ng-cloak>
-                            <div class="col-md-2 top-index">#{{$index+1}}</div>
-                            <div class="col-md-10 top-detail">
+                            <div class="col-xs-2 col-sm-2 col-md-2 top-index">#{{$index+1}}</div>
+                            <div class="col-xs-10 col-sm-10 col-md-10 top-detail">
                                 <div class="top-name">{{topRaised.name}}</div>
                                 <div class="top-grade">{{topRaised.grade}}</div>
                                 <div class="top-raised">{{topRaised.raised | currency:"$":0}}</div>
@@ -116,8 +116,8 @@
 		    <h3>Top class for<br/>registered students</h3>
   		    <div class="ym-tl-registered-students col-md-12">
                         <div class="row" ng-repeat="topStudent in topClassStudents" role="listitem" ng-if="topClassStudents.length > 0" ng-cloak>
-                            <div class="col-md-2 top-index">#{{$index+1}}</div>
-                            <div class="col-md-10 top-detail">
+                            <div class="col-xs-2 col-sm-2 col-md-2 top-index">#{{$index+1}}</div>
+                            <div class="col-xs-10 col-sm-10 col-md-10 top-detail">
                                 <div class="top-name">{{topStudent.name}}</div>
                                 <div class="top-grade">{{topStudent.grade}}</div>
                                 <div class="top-students">{{topStudent.students}}</div>
