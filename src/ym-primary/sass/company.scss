@@ -79,12 +79,17 @@ body.pg-company {
           .ym-our-stats {
                margin-bottom:40px;
           }
-         .ym-tl-dollars-raised .row {
-              margin-right: -15px;
-         }
-          .ym-tl-registered-students .row {
-              margin-left:-15px;
-         }
+         .ym-tl-dollars-raised {
+              margin-bottom: 20px;
+              .row {
+                    margin-right: -15px;
+               }
+          }
+          .ym-tl-registered-students {
+               .row {
+                    margin-left:-15px;
+               }
+          }
      }
 }
  
