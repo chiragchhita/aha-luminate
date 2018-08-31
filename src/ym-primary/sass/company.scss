@@ -20,7 +20,11 @@ body.pg-company {
          text-align: center;
          color: #a41752;
     }
-     .ym-tl-dollars-raised .row {
+    > [class*="col-"] {
+         padding-left: 0 !important;
+         padding-right: 0 !important;
+    } 
+    .ym-tl-dollars-raised .row {
          margin-right: 2px;
     }
      .ym-tl-registered-students .row {
@@ -68,5 +72,10 @@ body.pg-company {
      .top-msg {
         font-size:10px;
     }
+     @media (min-width: $screen-sm-min) {
+          h2 {
+               font-size:32px;
+          }
+     }
 }
  
