@@ -3,7 +3,7 @@ body.pg-company {
           margin: 10px;
           width: 200px;
           height: 200px;
-          @media (min-width: $screen-sm-max) {
+          @media (max-width: $screen-sm-max) {
                height: auto;
           }
      }
@@ -11,7 +11,7 @@ body.pg-company {
      .ym-page-section__main > .col-md-6 {
           padding: 0 20px;
      }
-     @media (min-width: $screen-sm-min) {
+     @media (max-width: $screen-sm-max) {
           h2 {
                font-size:32px;
           }
@@ -27,7 +27,7 @@ body.pg-company {
      h2 {
          font-size:42px;
          color:#a41752;
-          @media (min-width: $screen-sm-max) {
+          @media (max-width: $screen-sm-max) {
                font-size:32px;
           }
     }
@@ -88,7 +88,7 @@ body.pg-company {
      .top-msg {
         font-size:10px;
     }
-     @media (min-width: $screen-sm-max) {
+     @media (max-width: $screen-sm-max) {
           .ym-our-stats {
                margin-bottom:40px;
           }
