@@ -1,4 +1,9 @@
 body.pg-company {
+     @media (max-width: $screen-sm-max) {
+          .ym-our-stats {
+               margin-bottom:40px;
+          }
+     }
      .ym-promo-block__item {
           margin: 10px;
           width: 200px;
@@ -89,9 +94,6 @@ body.pg-company {
         font-size:10px;
     }
      @media (max-width: $screen-sm-max) {
-          .ym-our-stats {
-               margin-bottom:40px;
-          }
          .ym-tl-dollars-raised {
               margin-bottom: 20px;
               .row {
