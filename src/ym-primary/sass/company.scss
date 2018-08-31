@@ -73,6 +73,11 @@ body.pg-company {
         font-size:10px;
     }
      @media (min-width: $screen-sm-min) {
+          body.pg-company {
+              .ym-promo-block__item {
+                    height: auto;
+               }
+          }
           h2 {
                font-size:32px;
           }
