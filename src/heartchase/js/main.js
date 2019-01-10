@@ -122,7 +122,9 @@
                 console.log(companyData);
                 console.log('companyData.length = ',companyData.length);
                 $.each(companyData, function() {
+                  if(this.amountRaised > 0) {
                   $('.insert_top-companies-list').append('<tr><td><a href="' + this.companyURL + '">' + this.companyName + '</a></td><td><span class="pull-right">$' + (this.amountRaised / 100).formatMoney(0) + '</span></td></tr>');
+                }
                 });
               }
               resolve();
